@@ -53,17 +53,17 @@ def callback():
     print(strin)
     if (int(v1.get())==1):
         print(strin)
-        p = subprocess.Popen([str(x), "-p",Users, "-no-remote", "https://contacts.google.com/?hl=de&tab=mC"])
+        subprocess.Popen([str(x), "-p",Users, "-new-instance", "https://contacts.google.com/?hl=de&tab=mC"])
 
     if (int(v2.get()) == 1):
-        subprocess.call([str(x), "-p", Users,"https://mail.google.com/mail/u/0/#inbox"])
+        subprocess.Popen([str(x), "-p",Users, "-new-tab", "https://mail.google.com/mail/u/0/#inbox"])
 
     if (int(v3.get()) == 1):
-        subprocess.call([str(x), "-p", Users,"https://mail.google.com/mail/u/0/#spam"])
+        subprocess.Popen([str(x), "-p",Users, "-new-tab", "https://mail.google.com/mail/u/0/#spam"])
 
     if (int(v4.get()) == 1):
-        subprocess.call([str(x), "-p", Users,"http://checkip.dyn.com/"])
-
+        subprocess.Popen([str(x), "-p",Users, "-new-tab", "http://checkip.dyn.com/"])
+        
 #Create Input *********************
 
 username=Label(fenster, text='Profil',font=helv36)
