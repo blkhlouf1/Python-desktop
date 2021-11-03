@@ -53,7 +53,7 @@ def callback():
     print(strin)
     if (int(v1.get())==1):
         print(strin)
-        subprocess.Popen([str(x), "-p",Users, "-new-instance", "https://contacts.google.com/?hl=de&tab=mC"])
+        p = subprocess.Popen([str(x), "-p",Users, "-new-instance", "https://contacts.google.com/?hl=de&tab=mC"])
 
     if (int(v2.get()) == 1):
         subprocess.Popen([str(x), "-p",Users, "-new-tab", "https://mail.google.com/mail/u/0/#inbox"])
