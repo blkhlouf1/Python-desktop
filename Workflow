@@ -56,6 +56,10 @@ https://github.com/blkhlouf1/webmail_automation/blob/master/Yahoo_mail_open
 ressources:
 
 
+https://docs.python.org/3/library/threading.html#semaphore-objects
+
+https://stackoverflow.com/questions/1787397/how-do-i-limit-the-number-of-active-threads-in-python/5991741#5991741
+https://stackoverflow.com/questions/19369724/the-right-way-to-limit-maximum-number-of-threads-running-at-once
 https://coderoad.ru/35906723/%D0%9A%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-imacros-%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-html
 https://gist.github.com/x011/f0b2af25631aeffadf040830897521f9
 https://books.google.de/books?id=5hkIEAAAQBAJ&pg=PA206&lpg=PA206&dq=play+imacros+from+navigation&source=bl&ots=9RoYoi6iFe&sig=ACfU3U3p16TXT13shktd3u2t5EPfRaEiIQ&hl=en&sa=X&ved=2ahUKEwj5vIrJ8ID0AhUKhP0HHZ35DckQ6AF6BAgmEAM#v=onepage&q=play%20imacros%20from%20navigation&f=false
