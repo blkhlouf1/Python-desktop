@@ -1,4 +1,6 @@
 import subprocess
+import Pmw
+import os
 from tkinter import Tk
 from tkinter import Button
 from tkinter import Checkbutton
@@ -6,8 +8,6 @@ from tkinter import Label
 from tkinter import Entry
 from tkinter import StringVar
 from tkinter import mainloop
-import Pmw
-import os
 from tkinter import font as tkFont
 from tkinter import filedialog
 
@@ -53,16 +53,16 @@ def callback():
     print(strin)
     if (int(v1.get())==1):
         print(strin)
-        p = subprocess.Popen([str(x), "-p",Users, "-new-instance", "https://contacts.google.com/?hl=de&tab=mC"])
+        p = subprocess.Popen([str(x), "-p",Users, "-no-remote", "https://contacts.google.com/?hl=de&tab=mC"])
 
     if (int(v2.get()) == 1):
-        subprocess.Popen([str(x), "-p",Users, "-new-tab", "https://mail.google.com/mail/u/0/#inbox"])
+        subprocess.Popen([str(x), "-p",Users, "-no-remote", "https://mail.google.com/mail/u/0/#inbox"])
 
     if (int(v3.get()) == 1):
-        subprocess.Popen([str(x), "-p",Users, "-new-tab", "https://mail.google.com/mail/u/0/#spam"])
+        subprocess.Popen([str(x), "-p",Users, "-no-remote", "https://mail.google.com/mail/u/0/#spam"])
 
     if (int(v4.get()) == 1):
-        subprocess.Popen([str(x), "-p",Users, "-new-tab", "http://checkip.dyn.com/"])
+        subprocess.Popen([str(x), "-p",Users, "-no-remote", "imacros://run/?m=saber.js"])
         
 #Create Input *********************
 
@@ -101,7 +101,7 @@ helv36 = tkFont.Font(family='Helvetica', size=10, weight='bold')
 Checkbutton(fenster,  text="contacts",  padx = 20, variable=v1,height=2,font=helv36).place(x=0, y=210)
 Checkbutton(fenster,  text="Mails",  padx = 20, variable=v2,font=helv36,height=2).place(x=140, y=210)
 Checkbutton(fenster,  text="Spam",  padx = 20, variable=v3,font=helv36,height=2).place(x=280, y=210)
-Checkbutton(fenster,  text="IP",  padx = 20, variable=v4,font=helv36,height=2).place(x=418, y=210)
+Checkbutton(fenster,  text="Reporting",  padx = 20, variable=v4,font=helv36,height=2).place(x=418, y=210)
 
 
 
