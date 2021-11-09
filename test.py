@@ -1,3 +1,4 @@
+from multiprocessing import Pool
 import subprocess
 import Pmw
 import time
@@ -31,9 +32,10 @@ def UploadAction():
     label1 =Label(fenster, text=filename,bg="white")
     label1.place(x=0,y=60,width=500,height=50)
 
-
-
-
+def open_profile(profilename):
+ 
+    strin = '"C:\Program Files\Cyberfox\Cyberfox.exe"'+' -p ' + profilename + " -no-remote" + " imacros://run/?m=saber.js"
+    subprocess.Popen(strin)
 
 
 
@@ -66,15 +68,17 @@ def callback():
 			time.sleep(10)
 		counter1.setentry(stop+1)	
 	if (int(v4.get()) == 1):
+		process_cap = 4
+		p = Pool(process_cap)
 		for i in range (int(start),stop):
 			print(i)
-			strin = '"C:\Program Files\Cyberfox\Cyberfox.exe"'+' -p ' + user + str(i) + " -no-remote" + " imacros://run/?m=saber.js"
-			print(strin)			
-			subprocess.Popen(strin)
+			p.map(open_profile, i)
 			time.sleep(10)
-		counter1.setentry(stop+1)
-			
-        
+			p.close()
+			p.join()
+
+
+ 
 #Create Input *********************
 
 username=Label(fenster, text='Profil',font=helv36)
