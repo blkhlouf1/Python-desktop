@@ -1,21 +1,4 @@
-import subprocess
-import Pmw
-import os
-import threading
-import time
-
-# define the function callback to open the browser Site **************
-def callback():
-    Users = "su1"
-    strin = '"C:\Program Files\Cyberfox\Cyberfox.exe"'+' -p ' + Users
-    print(strin)
-    p = subprocess.Popen(strin)
-
-    
-
-#Create Input ********************
-
-start_time = time.time()from multiprocessing import Pool
+from multiprocessing import Pool
 import subprocess
 import time
 from multiprocessing.pool import ThreadPool
